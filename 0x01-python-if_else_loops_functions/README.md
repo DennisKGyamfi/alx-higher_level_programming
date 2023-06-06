@@ -1,8 +1,8 @@
-PROJECT: 0x01. Python - if/else, loops, functions
+**PROJECT:** 0x01. Python - if/else, loops, functions
 
-TASKS
+**TASKS**
+
 0. **Positive anything is better than negative nothing**
-*mandatory*
 
 This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
 
@@ -18,7 +18,6 @@ This program will assign a random signed number to the variable number each time
 
 
 1. **The last digit**
-*mandatory*
 
 This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable number.
 
@@ -47,7 +46,7 @@ Write a program that prints the ASCII alphabet, in lowercase, not followed by a 
 
 
 3. **When I was having that alphabet soup, I never thought that it would pay off**
-*mandatory*
+
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
       * Print all the letters except q and e
@@ -57,8 +56,8 @@ Write a program that prints the ASCII alphabet, in lowercase, not followed by a 
     * You are not allowed to import any module
 
 
-4. Hexadecimal printing
-mandatory
+4. **Hexadecimal printing**
+
 Write a program that prints all numbers from *0* to *98* in decimal and in hexadecimal (as in the following example)
 
     * You can only use one *print* function with string format
@@ -68,7 +67,7 @@ Write a program that prints all numbers from *0* to *98* in decimal and in hexad
 
 
 5. **00...99**
-*mandatory*
+
 Write a program that prints numbers from 0 to 99.
 
 * Numbers must be separated by ,, followed by a space
@@ -80,8 +79,8 @@ Write a program that prints numbers from 0 to 99.
 * You are not allowed to import any module
 
 
-6. Inventing is a combination of brains and materials. The more brains you use, the less material you need
-mandatory
+6. **Inventing is a combination of brains and materials. The more brains you use, the less material you need**
+
 Write a program that prints all possible different combinations of two digits.
 
 * Numbers must be separated by *,*, followed by a space
@@ -96,8 +95,8 @@ Write a program that prints all possible different combinations of two digits.
 * You are not allowed to import any module
 
 
-7. islower
-mandatory
+7. **islower**
+
 Write a function that checks for lowercase character.
 
 * Prototype: *def islower(c):*
@@ -105,12 +104,12 @@ Write a function that checks for lowercase character.
 * Returns *False* otherwise
 * You are not allowed to import any module
 * You are not allowed to use *str.upper()* and *str.isupper()*
-* (Tips: ord() )[https://docs.python.org/3.4/library/functions.html?highlight=ord#ord]
+* (Tips: ord())[https://docs.python.org/3.4/library/functions.html?highlight=ord#ord]
 You don’t need to understand *__import__*
 
 
 8. **To uppercase**
-*mandatory*
+
 Write a function that prints a string in uppercase followed by a new line.
 
 * Prototype: *def uppercase(str):*
@@ -118,12 +117,12 @@ Write a function that prints a string in uppercase followed by a new line.
 * You can only use one loop in your code
 * You are not allowed to import any module
 * You are not allowed to use *str.upper()* and *str.isupper()*
-* (Tips: ord() )[https://docs.python.org/3.4/library/functions.html?highlight=ord#ord]
+* (Tips: ord())[https://docs.python.org/3.4/library/functions.html?highlight=ord#ord]
 You don’t need to understand *__import__*
 
 
 9. **There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important**
-*mandatory*
+
 Write a function that prints the last digit of a number.
 
 * Prototype: *def print_last_digit(number):*
@@ -133,7 +132,7 @@ You don’t need to understand *__import__*
 
 
 10. **a + b**
-*mandatory*
+
 Write a function that adds two integers and returns the result.
 
 * Prototype: *def add(a, b):*

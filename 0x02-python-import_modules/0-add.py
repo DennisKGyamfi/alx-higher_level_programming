@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-import add_0
-add_0.add(1, 2)
+from add_0 import add
+
+a = 1
+b = 2
+result = add(a, b)
+print(f"{a} + {b} = {result}")

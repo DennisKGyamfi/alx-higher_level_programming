@@ -5,5 +5,5 @@ def new_in_list(my_list, idx, element):
         new_copied_list = my_list[:]
         return new_copied_list
     else:
-        copied_list[idx] = element
+        new_copied_list[idx] = element
         return new_copied_list

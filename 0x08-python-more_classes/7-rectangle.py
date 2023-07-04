@@ -5,7 +5,7 @@ Defines a Rectangle class.
 
 
 class Rectangle:
-    """Represent a rectangle.
+    """Represents a rectangle.
 
     Attributes:
         number_of_instances (int): The number of Rectangle instances.

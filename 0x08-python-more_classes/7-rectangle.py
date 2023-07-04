@@ -18,7 +18,14 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle instance.
         Args:
-            width: width of the rectangle
+            width: width of the rectang   rec_str += str(self.print_symbol)
+            rec_str += '\n'
+        return rec_str[:-1]
+
+    def __repr__(self):
+        """Return a string representation of a Rectangle instance
+        that is able to recreate a new instance by using eval()
+        le
             height: height of the rectangle
         """
         self.width = width
@@ -31,26 +38,9 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ''
         rec_str = ''
-        for i in rangeinteger
-        """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
-
-    @property
-    def height(self):
-  (self.__height):
+        for i in range(self.__height):
             for j in range(self.__width):
-                rec_str += str(self.print_symbol)
-            rec_str += '\n'
-        return rec_str[:-1]
-
-    def __repr__(self):
-        """Return a string representation of a Rectangle instance
-        that is able to recreate a new instance by using eval()
-        """
+             """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
@@ -67,7 +57,17 @@ class Rectangle:
     def width(self, value):
         """Sets the width of a Rectangle instance
         Args:
-            value: value of the width, must be a positive       """Retrieves the height of a Rectangle instance."""
+            value: value of the width, must be a positive integer
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """Retrieves the height of a Rectangle instance."""
         return self.__height
 
     @height.setter

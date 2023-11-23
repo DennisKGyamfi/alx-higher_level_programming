@@ -1,0 +1,98 @@
+
+y==================================
+The ``add_integer`` module
+==================================
+
+using ``add_integer``
+-------------------------
+
+Importing the function 'add_integr' from add_integer.py
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Edge Case Scenario: 
+
+performing a regular addition:
+    >>> add_integer(5, 5)
+    10
+
+Scenario: Minimum and Maximum values:
+
+Adding zero to a positive number:
+    >>> add_integer(0, 8)
+    8
+
+Adding zero to zero:
+    >>> add_integer(0, 0)
+    0
+
+Adding a negative number to a positive number:
+    >>> add_integer(-4, 8)
+    4
+
+Adding a negative number to a negative number:
+    >>> add_integer(-7, -9)
+    -16
+
+Adding a negative number to zero:
+    >>> add_integer(-8, 0)
+    -8
+
+Adding  large positive numbers:
+    >>> add_integer(999999999,1 )
+    1000000000
+
+Adding two large positive numbers:
+    >>> add_integer(9999999999, 99999999)
+    10099999998
+
+Adding 
+Adding a letter to a letter:
+    >>> add_integer('a', 'b')
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
+
+Non-numbers as input:
+
+Adding non-number(list) to number:
+    >>> add_integer([4,5], 9)
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integera large negative number to a positive number:
+        >>> add_integer(-999999999999, 4444444) #doctest: +ELLIPSIS
+	    -...
+
+Adding two large negative numbers
+    >>> add_integer(-88898989898, -757575757575) #doctest: +ELLIPSIS
+        -...
+
+Checking for passed inf:
+	  >>> add_integer(9, float('inf'))
+	       Traceback (most recent call last):
+	       		  ...
+				 OverflowError: cannot convert float infinity to integer
+
+Scenario: Empty or Null inputs:
+
+Passing only one argument to the function:
+    >>> add_integer(5)
+        103
+
+Passing no argument to the function:
+    >>> add_integer()
+        Traceback (most recent call last):
+	    ...
+	        TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Scenario: Unusual inputs:
+
+NaN as inputs:
+    >>> add_integer(float('nan'),5)
+        Traceback (most recent call last):
+	    ...
+	        ValueError: cannot convert float NaN to integer
+
+letters as inputs:
+
+Adding a letter to a number:
+

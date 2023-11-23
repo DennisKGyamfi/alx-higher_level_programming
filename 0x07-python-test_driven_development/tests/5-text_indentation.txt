@@ -1,0 +1,42 @@
+========================================
+Test for the ``text_indentation`` function
+in the ``5-text_indentation.py`` module
+========================================
+
+Using ``text_indentation``
+------------------------
+
+Importing the function ``text_indentation`` from ``5-text_indentation.py``
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Edge Case Scenarios:
+Regular inputs:
+Checking for text being a string:
+    >>> text_indentation("Holberton. School? How are you:  John")
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
+
+Checking for text nor being a string:
+    >>> text_indentation(99)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Empty or Null inputs:
+Checking for missing argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Checking for multiple spaces:
+     >>> text_indentation("Ground Control.  How are you?   ")
+     Ground Control.
+     <BLANKLINE>
+     How are you?
+     <BLANKLINE>

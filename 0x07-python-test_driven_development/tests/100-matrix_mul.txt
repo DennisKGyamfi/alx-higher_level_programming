@@ -1,0 +1,102 @@
+========================================
+Test for the ``matrix_mul`` function
+in the ``100-matrix_mul.py`` module
+========================================
+
+Using ``matrix_mul``
+------------------------
+
+Importing the function ``matrix_mul`` from ``100-matrix_mul.py``
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Edge Case Scenarios:
+
+regular inputs:
+Both m_a and m_b being list of list of numbers
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[7, 10], [15, 22]]
+    >>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13, 16]]
+
+m_a being a string and m_b being a list of list of numbers
+    >>> print(matrix_mul("hello there",[[1, 2]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+m_a being a list of list of integers and m_b being a string
+    >>> print(matrix_mul([[1, 2]], "hello there"))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+m_a being just a list and m_b being a list of list of integers
+    >>> print(matrix_mul([1, 2], [[1, 2], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list of lists
+
+m_a being a listt of list of integers and m_b being a list
+    >>> print(matrix_mul([[1, 2], [3, 4]], [1, 2]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list of lists
+
+m_a being empty and m_b being a list of list of numbers
+    >>> print(matrix_mul([[]], [[1, 2], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+m_a being a list of list of integers andd m_b being empty
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[]]))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+m_a being a list of list of non-numbers and m_b being a list of list of numbers
+    >>> print(matrix_mul([['hello','there']], [[1, 2], [3, 4]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+
+m_a being a list of a list of integers and m_b being a list of list of non_numbers
+    >>> print(matrix_mul([[1, 2], [3, 4]], [['hello','there']]))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+ma being a list of lists of number of various size and mb being a list of lists of number
+    >>> m_a = [[1, 2], [3, 4, 5]]
+    >>> m_b = [[1, 2],[3, 4]]
+    >>> print(matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size
+
+m_b being a list of lists of number of various size and m_a being a list of lists of number
+    >>> m_a = [[1, 2],[3, 4]]
+    >>> m_b = [[1, 2], [3, 4, 5]]
+    >>> print(matrix_mul(m_a, m_b))   
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must be of the same size
+
+checking for m_a and m_b can't be multiplied
+    >>> m_a = [[1, 2],[3, 4]]
+    >>> m_b = [[1, 2],[2, 3],[4, 5]]
+    >>> print(matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+
+Test for function missing one argument:
+    >>> print(matrix_mul([[1, 2],[2, 3]]))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test for function missing two arguments:
+    >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'

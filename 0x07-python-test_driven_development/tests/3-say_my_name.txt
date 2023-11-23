@@ -1,0 +1,43 @@
+========================================
+Test for the ``say_my_name`` function
+in the ``3-say_my_name.py`` module
+========================================
+
+Using ``say_my_name``
+------------------------
+
+Importing the function ``say_my_name`` from ``3-say_my_name.py``
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Edge Case Scenarios:
+
+Regular inputs:
+Both first and last name are string:
+    >>> say_my_name("Elon", "Musket")
+    My name is Elon Musket
+    >>> say_my_name("Kobby", "Boateng")
+    My name is Kobby Boateng
+
+Empty or Null inputs:
+Checking for 1 argument:
+    >>> say_my_name("Kobby")
+    My name is Kobby
+
+No arguments:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Unusual inputs:
+first argument a string, second argument is not:
+    >>> say_my_name('Kobby', 99)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+last argument a sting, first argument is not:
+    >>> say_my_name(99, 'Kobby')
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
